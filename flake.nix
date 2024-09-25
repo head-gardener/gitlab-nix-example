@@ -13,6 +13,9 @@
           ({ lib, ... }: {
             networking.firewall.enable = lib.mkForce false;
             boot.isContainer = true;
+            programs.atop.enable = lib.mkForce false;
+            services.gitlab.host = "10.233.1.2";
+            services.gitlab.port = 80;
           })
           "${nixpkgs}/nixos/modules/virtualisation/container-config.nix"
         ];

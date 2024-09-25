@@ -14,6 +14,10 @@ in {
     };
   };
 
+  services.gitlab-runner = {
+    enable = true;
+  };
+
   services.nginx = {
     enable = true;
     recommendedProxySettings = true;
